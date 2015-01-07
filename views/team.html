@@ -1,0 +1,79 @@
+<div class="header segment">
+  <div class="container">
+    <div class="introduction">
+      <h1 class="ui header">
+        Zespół
+      </h1>
+      <p>Skład Laboratorium ADEC</p>
+      <div class="ui divider"></div>
+    </div> <!-- /introduction -->
+  </div> <!-- /container -->
+</div> <!-- /header segment -->
+
+<div class="main container">
+
+  <div class="ui close right rail">
+    <div class="ui sticky transition visible fixed">
+      <div class="ui secondary vertical following fluid accordion menu">
+        <div class="item" ng-repeat="position in crew">
+          <a clas="title">
+            <i class="dropdown icon"></i>
+            <b>{{position.position}}</b>
+          </a>
+          <div class="content menu">
+            <a class="item"
+               href=""
+               ng-repeat="member in position.members"
+               ng-click="gotoAnchor(member.first_name + member.last_name)">
+              {{member.first_name}} {{member.last_name}}
+            </a>
+          </div> <!-- /content menu -->
+        </div> <!-- /item -->
+      </div> <!-- /ui secondary vertical following fluid accordion menu -->
+    </div> <!-- /sticky transition visible -->
+  </div> <!-- /ui close right rail -->
+
+  <div ng-repeat="position in crew">
+  <h2 class="ui dividing header">
+    {{ position.position }}
+  </h2>
+
+  <div class="ui special cards">
+    <div class="card"
+         id="{{member.first_name}}{{member.last_name}}"
+         ng-repeat="member in position.members">
+      <div class="dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <a class="ui inverted button"
+                 href="{% url 'users:detail' user.username %}">
+                Szczegóły
+              </a>
+            </div> <!-- /center -->
+          </div> <!-- /content -->
+        </div> <!-- /ui dimmer -->
+        <img src="" />
+      </div> <!-- /dimmable image -->
+      <div class="content">
+        <a class="header"
+           href="{% url 'users:detail' user.username %}">
+          {{ member.first_name }} {{ member.last_name }}
+        </a>
+        <div class="meta">
+          <div class="group">{{position.position}}</div>
+            <span class="meta">
+              Krótki opis
+            </span>
+        </div> <!-- meta -->
+      </div> <!-- /content -->
+      <div class="extra content">
+        <a class="left floated publications">
+          <i class="file text icon"></i>
+          {{member.publications}} publikacje
+        </a>
+      </div> <!-- /extra content -->
+    </div> <!-- /card -->
+  </div> <!-- /special cards -->
+
+</div> <!-- /main container -->

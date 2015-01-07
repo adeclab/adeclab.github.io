@@ -1,0 +1,137 @@
+#home .ui.ad {
+  max-width: 100%;
+}
+
+#home > .pusher > .footer {
+  clear: both;
+}
+#home .main.container {
+  background-color: #FFFFFF;
+  margin: 0em auto;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 2em 2em 7em;
+  z-index: 1;
+}
+#home .container {
+  position: relative;
+  width: 915px;
+  margin: 0px auto;
+}
+#home .main.container > .right.rail .sticky,
+#home .main.container > .tab > .right.rail .sticky {
+  padding: 2em 0em;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#home .following.menu .menu .active.item {
+  font-weight: bold;
+}
+#home .following.menu .item .menu {
+  margin: 0em;
+}
+#home .following.menu .menu .item {
+  margin: 0em;
+  padding: 0.5rem 0.25rem;
+}
+
+/*--------------
+Sidebar
+---------------*/
+
+#home #menu > :last-child {
+  padding-bottom: 2em;
+}
+#home #menu .logo.image {
+  width: 35px;
+  margin-right: 1em;
+}
+#home #menu .item {
+  position: relative;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+#home #menu .item .circular.label {
+  position: absolute;
+  top: 0.75rem;
+  right: 1em;
+  opacity: 0.2;
+  transition: background 0.3s ease;
+}
+#home #menu .item.active > .circular.label,
+#home #menu .item:hover > .circular.label {
+  opacity: 0.8;
+}
+
+#home #menu .inverted.header {
+  font-size: 1em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5em;
+}
+#home #menu a.inverted.header.active,
+#home #menu a.inverted.header:hover {
+  color: rgba(255, 255, 255, 1);
+}
+#home #menu .hide.item {
+  display: none;
+}
+#home #menu .menu .active.item {
+  color: #6DFFFF !important;
+}
+
+
+/* segment headers */
+#home .header.segment {
+  position: relative;
+  z-index: 2;
+  margin: 0em;
+  min-height: 185px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+#home .header.segment h1 {
+  margin-bottom: 0em;
+}
+#home .tab.header.segment {
+  padding-bottom: 0em;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
+}
+#home .tab.header.segment .vertical.menu {
+  display: none;
+  margin: 2rem 0em 1rem;
+}
+#home .tab.header.segment .tabular.menu {
+  clear: both;
+  margin: 2rem 0px 0em;
+  border-bottom: none;
+}
+#home .tab.header.segment .tabular.menu .active.item {
+  background-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

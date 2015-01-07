@@ -1,0 +1,101 @@
+<div class="fixed light following bar"
+     ng-controller="NavbarCtrl as nav"> <!-- add fixed light for static nav -->
+  <div class="ui page grid">
+    <div class="column">
+      <div class="ui logo shape">
+        <img class="ui image" src="images/adec.png">
+      </div> <!-- ui logo shape -->
+
+      <div class="ui right floated secondary menu">
+        <div class="ui login top right pointing dropdown basic button">
+          <i class="user icon"></i>
+          <a href="{% url 'account_login' %}" class="text">Zaloguj się</a>
+          <!-- Wstaw tutuaj panel logowania -->
+          <div class="menu">
+            <div class="ui segment">
+              <div class="ui vertical segment">
+                <div class="ui form">
+                  <div class="two fields">
+                    <div class="required field">
+                      <label>E-mail</label>
+                      <div class="ui icon input">
+                        <input type="text" placeholder="e-mail">
+                        <i class="user icon"></i>
+                      </div>
+                    </div> <!-- required field -->
+                    <div class="required field">
+                      <label>Hasło</label>
+                      <div class="ui icon input">
+                        <input type="text" placeholder="hasło">
+                        <i class="lock icon"></i>
+                      </div>
+                    </div> <!-- required field -->
+                  </div> <!-- two fields -->
+                  <div class="ui buttons">
+                    <a class="ui button" href="{% url 'account_signup' %}">Zarejestruj</a>
+                    <div class="or"></div>
+                    <a class="ui positive button" href="{% url 'account_login' %}">Zaloguj</a>
+                  </div> <!-- ui buttons -->
+                </div> <!-- ui form -->
+              </div> <!-- ui vertical segment -->
+
+              <div class="ui vertical segment">
+                <a class="ui facebook button"
+                   href="{% provider_login_url 'facebook' method='oauth2' %}">
+                  <i class="facebook icon"></i>
+                  Facebook
+                </a> <!-- ui facebook button -->
+                <div class="ui google plus button">
+                  <i class="google plus icon"></i>
+                  Google+
+                </div> <!-- /ui google plus button -->
+                <div class="ui twitter button">
+                  <i class="twitter icon"></i>
+                  Twitter
+                </div> <!-- /ui twitter button -->
+                <div class="ui linkedin button">
+                  <i class="linkedin icon"></i>
+                  LinkedIn
+                </div> <!-- /ui linkedin button -->
+              </div> <!-- ui vertical segment -->
+            </div> <!-- ui segment -->
+          </div> <!-- menu -->
+        </div> <!-- ui login top right pointing dropdown basic button -->
+      </div> <!-- /ui right floated secondary menu -->
+
+      <div class="ui large secondary network menu">
+        <a href="about" class="view-ui item">Laboratorium ADEC</a>
+        <span class="additional item" data-site="news"
+              data-content="Już wkrótce!">
+          <i class="content icon"></i>
+          Wiadomości
+        </span>
+        <a href="team"
+           class="additional item"
+           data-site="team">
+          <i class="users icon"></i>
+          Zespół
+        </a>
+        <span class="additional item"
+              data-site="projects"
+              data-content="Już wkrótce!">
+          <i class="lab icon"></i>
+          Projekty
+        </span>
+        <span class="additional item"
+              data-site="theses"
+              data-content="Już wkrótce!">
+          <i class="student icon"></i>
+          Dyplomy
+        </span>
+        <span class="additional item"
+              data-site="tools"
+              data-content="Już wkrótce!">
+          <i class="configure icon"></i>
+          Narzędzia
+        </span>
+      </div> <!-- /ui large secondary network menu -->
+
+    </div> <!-- /column -->
+  </div> <!-- /ui page grid -->
+</div> <!-- /folowing bar -->
